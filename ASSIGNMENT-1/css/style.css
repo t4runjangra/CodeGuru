@@ -1,0 +1,258 @@
+:root {
+    --bg: #f6f8fb;
+    --card: #ffffff;
+    --accent: #0066ff;
+    --muted: #6b7280;
+    --maxw: 1100px;
+}
+
+* {
+    box-sizing: border-box
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background: var(--bg);
+    color: #0f172a;
+    line-height: 1.6;
+}
+
+main {
+    flex: 1;
+}
+
+.container {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.site-header {
+    background: #fff;
+    border-bottom: 1px solid #e6e9ef;
+    position: sticky;
+    top: 0;
+    z-index: 20
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.75rem 0
+}
+
+.logo {
+    font-weight: 700;
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 1.125rem
+}
+
+.main-nav {
+    display: flex;
+    gap: 0.75rem
+}
+
+.nav-link {
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    text-decoration: none;
+    color: inherit;
+    transition: background .18s, color .18s
+}
+
+.nav-link:hover {
+    background: #f1f5f9;
+    color: var(--accent)
+}
+
+.hero {
+    padding: 3rem 0;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%)
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 2rem;
+    align-items: center
+}
+
+.hero-text h1 {
+    font-size: 2rem;
+    margin: 0 0 .25rem
+}
+
+.slogan {
+    color: var(--accent);
+    font-weight: 600;
+    margin: 0 0 .5rem
+}
+
+.lead {
+    color: var(--muted);
+    margin-bottom: 1rem
+}
+
+.logo-placeholder {
+    height: 220px;
+    background: linear-gradient(135deg, #e6eefc, #ffffff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    border: 1px solid #e6eefc;
+    color: var(--muted);
+    font-weight: 700
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: #fff
+}
+
+.btn-primary:hover {
+    background: #0050e0
+}
+
+.btn-secondary {
+    background: #eef2ff;
+    color: var(--accent)
+}
+
+.welcome {
+    padding: 2rem 0
+}
+
+.grid.two-col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 1rem 0
+}
+
+.card {
+    background: var(--card);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.04)
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin: 1rem 0
+}
+
+.service-card {
+    background: var(--card);
+    padding: 1.25rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.04)
+}
+
+.contact-page .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 2rem;
+    margin: 1rem 0
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: .75rem
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: .6rem;
+    border: 1px solid #e6e9ef;
+    border-radius: 8px
+}
+
+.contact-form .full {
+    grid-column: 1/-1
+}
+
+.job-listings .job {
+    background: var(--card);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem
+}
+
+.join-team {
+    margin: 1.5rem 0
+}
+
+.site-footer {
+    background: #fff;
+    border-top: 1px solid #e6e9ef;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+}
+.socials a {
+    margin-left: .75rem;
+    color: var(--muted);
+    text-decoration: none
+}
+
+.socials a:hover {
+    color: var(--accent)
+}
+
+/* Responsive */
+@media (max-width:900px) {
+    .hero-grid {
+        grid-template-columns: 1fr
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .grid.two-col {
+        grid-template-columns: 1fr
+    }
+
+    .contact-page .contact-grid {
+        grid-template-columns: 1fr
+    }
+}
+
+@media (max-width:520px) {
+    .main-nav {
+        display: none
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr
+    }
+}
