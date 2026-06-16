@@ -1,0 +1,47 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:black;
+color:white;
+font-family:'Poppins', sans-serif;
+}
+
+.hero-section{
+display:flex;
+justify-content:center;
+align-items:center;
+flex-wrap:wrap;
+gap:25px;
+padding:40px;
+}
+
+.poster-card{
+flex:1 1 200px;
+max-width:250px;
+text-align:center;
+transition:transform 0.3s ease;
+}
+
+.poster-card:hover{
+transform:scale(1.05);
+}
+
+.poster{
+width:200px;
+height:auto;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(255,255,255,0.1);
+}
+
+.poster-card h2{
+font-size:1.1rem;
+margin:10px 0 5px 0;
+}
+
+.poster-card p{
+color:#d1d5db;
+}
